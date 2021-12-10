@@ -19,7 +19,7 @@ def find_all_user():
 @user_routes.route('/<int:id>', methods=['GET'])
 def find_by_id(id):
     fetched = User.query.get_or_404(id)
-    user_schema = User()
+    user_schema = UserSchema()
     users = user_schema.dump(fetched)
     return response_with(resp.SUCCESS_200, value={'users': users})
 
@@ -37,19 +37,22 @@ def create_user():
         return response_with(resp.INVALID_INPUT_422)
 
 
-# @user_routes.route('/update-user/<int: id>', methods=['PUT'])
-# def update_user(id):
-#     try:
-#         data = request.get_json()
-#         get_user = User.query.get_or_404(id)
-#         get_user.name = data['name']
-#         get_user.idn = data['idn']
-#         get_user.wallet = data['wallet']
-#         db.session.add(get_user)
-#         db.session.commit()
-#         user_schema = UserSchema()
-#         user = user_schema.dump(get_user)
-#         return response_with(resp.SUCCESS_200, value={'user': user})
-#     except Exception as e:
-#         print(e)
-#         return response_with(resp.INVALID_INPUT_422)
+@user_routes.route('/update-user/<int:idUser>', methods=['PUT'])
+def update_user(idUser):
+    try:
+        get_user = User.query.get_or_404(idUser)
+        data = request.get_json()
+        get_user.name = data['name']
+        get_user.idn = data['idn']
+        db.session.add(get_user)
+        db.session.commit()
+        user_schema = UserSchema()
+        user = user_schema.dump(get_user)
+        return response_with(resp.SUCCESS_200, value={'user': user})
+    except Exception as e:
+        print(e)
+        print('hoang')
+        return response_with(resp.INVALID_INPUT_422)
+
+
+
