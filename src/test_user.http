@@ -1,0 +1,23 @@
+###
+GET {{host}}:{{port}}/api/users/find-all-users HTTP/1.1
+Content-Type: application/json
+
+###
+GET {{host}}:{{port}}/api/users/1 HTTP/1.1
+Accept: application/json
+
+### create user
+POST {{host}}:{{port}}}}/api/users/create-user
+
+
+### Send POST request with json body
+POST http://127.0.0.1:5000/api/users/create-user
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+  "idn": "133333383.0",
+  "name": "Huy be de",
+  "wallet": "10000.0"
+}
+
