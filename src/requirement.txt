@@ -1,0 +1,4 @@
+flask
+passlib==1.7.4
+pymysql
+flask-marshmallow==0.14.0
