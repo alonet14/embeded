@@ -13,18 +13,18 @@ Content-Type: application/json
 Cache-Control: no-cache
 
 {
-  "idn": "133333383.0",
-  "name": "Huy be de",
-  "wallet": "10000.0"
+  "idn": "133333384.0",
+  "name": "Nguyen Thi Huy",
+  "wallet": "1000000.0"
 }
 
-
 ### UPDATE USER
-PUT  http://127.0.0.1:5000/api/users/update-user/6 HTTP/1.1
+PUT  http://127.0.0.1:5000/api/users/update-user/7 HTTP/1.1
 content-type: application/json
 cache-control: no-cache
 
 {
   "idn": 133233061,
-  "name": "Nguyen Thi Quan Huy"
+  "name": "Nguyen Thi Quang Huy"
 }
+
