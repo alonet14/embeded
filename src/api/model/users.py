@@ -9,6 +9,8 @@ class User(db.Model):
     idn = db.Column(db.Integer)
     name = db.Column(db.String(100))
     wallet = db.Column(db.Integer)
+    u_batteries = db.relationship('Battery', backref='u_owner')
+    #some_owner = Person.query.filter_by(name='Anthony').First()
 
     def __init__(self, idn, name, wallet):
         self.idn = idn
@@ -25,7 +27,6 @@ class UserSchema(ma.Schema):
     class Meta(ma.Schema.Meta):
         model = User
         load_instance = True
-
 
     id = fields.Number(dump_only=True)
     idn = fields.Number(dump_only=False, required=True)
