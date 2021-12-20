@@ -1,4 +1,3 @@
-from typing_extensions import Required
 from src.api.utils.database import db, ma
 from marshmallow import fields, post_load
 

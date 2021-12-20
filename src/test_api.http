@@ -1,11 +1,11 @@
-#api 2
-idUser = 2
-http://localhost:5000/api/battery/switch-pin/2
+
+PUT http://localhost:5000/api/battery/switch-pin/2
+
 {
     "leftMoney": 5000,
-    "idOldPin": 1,
-    "idNewPin": 2
+    "idOldPin": 2,
+    "idNewPin": 1
 }
 
-#api 1
-http://localhost:5000/api/battery/find-user-by-rfid?code=AAXX564T
+###
+GET http://localhost:5000/api/battery/find-user-by-rfid?code=AAXX564T
