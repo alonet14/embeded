@@ -7,6 +7,8 @@ from api.utils.responses import response_with
 import api.utils.responses as resp
 import logging
 from api.routes.users import user_routes
+from api.routes.station import station_routes
+from api.routes.battery import battery_routes
 app = Flask(__name__)
 
 if os.environ.get('WORK_ENV') == 'PROD':
@@ -24,6 +26,8 @@ with app.app_context():
     db.create_all()
 
 app.register_blueprint(user_routes, url_prefix='/api/users')
+app.register_blueprint(station_routes, url_prefix='/api/station')
+app.register_blueprint(battery_routes, url_prefix='/api/battery')
 
 @app.after_request
 def add_header(response):
