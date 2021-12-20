@@ -1,10 +1,12 @@
 
 PUT http://localhost:5000/api/battery/switch-pin/2
+content-type: application/json
+cache-control: no-cache
 
 {
-    "leftMoney": 5000,
-    "idOldPin": 2,
-    "idNewPin": 1
+    "leftMoney": 1000000,
+    "idOldPin": 1,
+    "idNewPin": 2
 }
 
 ###
