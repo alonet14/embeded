@@ -1,14 +1,14 @@
 import os
 from flask import Flask
 from flask import jsonify
-from api.utils.database import db, ma
-from api.config.config import DevelopmentConfig, ProductionConfig, TestingConfig
-from api.utils.responses import response_with
-import api.utils.responses as resp
+from src.api.utils.database import db, ma
+from src.api.config.config import DevelopmentConfig, ProductionConfig, TestingConfig
+from src.api.utils.responses import response_with
+import src.api.utils.responses as resp
 import logging
-from api.routes.users import user_routes
-from api.routes.station import station_routes
-from api.routes.battery import battery_routes
+from src.api.routes.users import user_routes
+from src.api.routes.station import station_routes
+from src.api.routes.battery import battery_routes
 app = Flask(__name__)
 
 if os.environ.get('WORK_ENV') == 'PROD':
