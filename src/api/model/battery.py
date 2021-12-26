@@ -39,6 +39,6 @@ class BatterySchema(ma.Schema):
     def make_battery(self, data, **kwargs):
         return Battery(**data)
 
-    def __init__(self, **kwargs):
-        self.id
+    # def __init__(self, **kwargs):
+    #     self.id
 
