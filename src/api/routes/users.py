@@ -44,6 +44,7 @@ def update_user(idUser):
         data = request.get_json()
         get_user.name = data['name']
         get_user.idn = data['idn']
+        get_user.wallet = data['wallet']
         db.session.add(get_user)
         db.session.commit()
         user_schema = UserSchema()
