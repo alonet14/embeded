@@ -1,10 +1,5 @@
 from src.api.utils.database import db, ma
 from marshmallow import fields, post_load
-
-
-
-
-
 class Battery(db.Model):
     __tablename__ = 'battery'
 

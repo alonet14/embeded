@@ -1,0 +1,10 @@
+### Send POST request with json body
+POST http://103.82.22.26:5000/api/battery/create-battery
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+  "idUser": 3,
+  "idStation": 1,
+    "rfidCode": "AAXX5U4K"
+}
