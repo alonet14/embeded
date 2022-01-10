@@ -1,30 +1,30 @@
 ###
-GET http://127.0.0.1:5000/api/users/find-all-users HTTP/1.1
+GET http://103.82.22.26:5000/api/users/find-all-users HTTP/1.1
 Content-Type: application/json
 
 ###
-GET http://127.0.0.1:5000/api/users/3 HTTP/1.1
+GET http://103.82.22.26:5000/api/users/9 HTTP/1.1
 Accept: application/json
 
 
 ### Send POST request with json body
-POST http://127.0.0.1:5000/api/users/create-user
+POST http://103.82.22.26:5000/api/users/create-user
 Content-Type: application/json
 Cache-Control: no-cache
 
 {
-  "idn": "133333384.0",
-  "name": "Nguyen Thi Huy",
+  "idn": "103822226",
+  "name": "Nguyen Viet Hoang Anh",
   "wallet": "1000000.0"
 }
 
 ### UPDATE USER
-PUT  http://127.0.0.1:5000/api/users/update-user/7 HTTP/1.1
+PUT  http://103.82.22.26:5000/api/users/update-user/9 HTTP/1.1
 content-type: application/json
 cache-control: no-cache
 
 {
-  "idn": 133233061,
-  "name": "Nguyen Thi Quang Huy"
+  "idn": "133233061",
+  "name": "Nguyen Viet Hoang"
 }
 
