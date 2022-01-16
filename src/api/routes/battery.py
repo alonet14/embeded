@@ -34,7 +34,7 @@ def find_by_rfid(rfid):
 
 #api 1
 @battery_routes.route('/find-user-by-rfid', methods=['GET'])
-def find_by_rfid():
+def find_user_by_rfid():
     rfid = request.args.get('code')
     fetched = Battery.query.filter_by(rfidCode=rfid).first()
     if not fetched:
