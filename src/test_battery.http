@@ -18,7 +18,7 @@ GET http://103.82.22.26:5000/api/battery/3
 Content-Type: application/json
 
 ###
-GET http://103.82.22.26:5000/api/battery/AAXX5U4K
+GET http://103.82.22.26:5000/api/battery/AAXX564H
 Content-Type: application/json
 
 ###
