@@ -25,6 +25,12 @@ def find_by_id(id):
     batteries = battery_schema.dump(fetched)
     return response_with(resp.SUCCESS_200, value={'battery': batteries})
 
+@battery_routes.route('/<str:rfid>', methods=['GET'])
+def find_by_rfid(rfid):
+    fetched = Battery.query.filter_by(rfidCode=rfid).first()
+    if not fetched:
+        return response_with(resp.INVALID_INPUT_422)
+    return response_with(resp.SUCCESS_200, value={'battery': fetched})
 
 #api 1
 @battery_routes.route('/find-user-by-rfid', methods=['GET'])

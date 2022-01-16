@@ -6,5 +6,21 @@ Cache-Control: no-cache
 {
   "idUser": 3,
   "idStation": 1,
-    "rfidCode": "AAXX5U4K"
+  "rfidCode": "AAXX5U4K"
 }
+
+###
+GET http://103.82.22.26:5000/api/battery/find-all-batteries
+Content-Type: application/json
+
+###
+GET http://103.82.22.26:5000/api/battery/3
+Content-Type: application/json
+
+###
+GET http://103.82.22.26:5000/api/battery/AAXX5U4K
+Content-Type: application/json
+
+###
+PUT http://103.82.22.26:5000/api/battery/update-battery/6
+
