@@ -15,17 +15,17 @@ Cache-Control: no-cache
 {
   "idn": "103822226",
   "name": "Nguyen Viet Hoang Anh",
-  "wallet": "1000000.0"
+  "wallet": 1000000
 }
 
 ### UPDATE USER
-PUT  http://103.82.22.26:5000/api/users/update-user/9 HTTP/1.1
+PUT  http://103.82.22.26:5000/api/users/update-user/10 HTTP/1.1
 content-type: application/json
 cache-control: no-cache
 
 {
-  "idn": "133233061",
-  "name": "Nguyen Viet Hoang",
-  "wallet": 10000
+  "idn": "133233063",
+  "name": "Nguyen Viet Hoang A",
+  "wallet": 200000
 }
 
